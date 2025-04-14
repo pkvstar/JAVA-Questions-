@@ -6,13 +6,13 @@ public class one{
         int[] s = {1,2,3};
         System.out.print(findContentChildren(g,s));
     }
-    public static int findContentChildren(int[] g, int[] s) {
+    public static int findContentChildren(int[] g, int[] s) { // TC -> O(n * logn + m * logm + m)
         Arrays.sort(g);
         Arrays.sort(s);
         int left = 0;
         int right = 0;
         int count=0;
-        while(left<g.length && right<s.length){
+        while(left<g.length && right<s.length){ 
             if(g[left] <= s[right]){
                 count++;
                 // left++; OR Part
